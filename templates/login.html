@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="static/css/form_style.css">
+        <link rel="stylesheet" href="static/css/index.css">
+    </head>
+    <body>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div>
+                    {{ messages[0] }}
+                </div>
+            {% endif %}
+            {% endwith %}
+        <div class="form_container" style="margin-top: 10em;">
+            <h1 class="h1_title_style">Login Page</h1>
+            <form method="POST" action="/handle_login">
+                <div>
+                    <h2 class="h2_title_style">Username</h2>
+                    <input class="input_text" name="username_input"><br>
+                </div>
+                <div>
+                    <h2 class="h2_title_style">Email</h2>
+                    <input class="input_text"  name="email_input"><br><br>
+                </div>
+                <button type="submit" class="form_button"> Login</button>
+            </form>            
+        </div>
+
+    </body>
+</html>

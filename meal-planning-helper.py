@@ -37,6 +37,18 @@ with app.app_context():
 def inital_menu():
     return flask.render_template('inital_menu.html')
 
+@app.route('/register', methods=['GET','POST'])
+def create_account():
+    return flask.render_template('register.html')
+
+@app.route('/login')
+def login():
+    return flask.render_template('login.html')
+
+
+# ------ Login Required Section ------ #
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
