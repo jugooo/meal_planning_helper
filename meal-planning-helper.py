@@ -49,7 +49,6 @@ class Person(UserMixin, db.Model):
 with app.app_context():
     db.create_all()
 
-
 @app.route('/',methods=['GET'])
 def inital_menu():
     return flask.render_template('inital_menu.html')
