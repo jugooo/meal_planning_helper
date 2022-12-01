@@ -24,13 +24,11 @@
         <!-- Button Group -->
         <div class="btn_group">
             <form action="/handle_save_recipe" method="POST">
-                <input type="hidden" value="currentuser" name="username_field">
-                <!-- <input type="hidden" value="{{recipe_name}}">
-                <input type="hidden" value="{{recipe_ingredients}}">
-                <input type="hidden" value="{{recipe_instructions}}"> -->
-                <input type="hidden" value="recipe_name" name="name">
-                <input type="hidden" value="recipe_ingredients" name="ingredients">
-                <input type="hidden" value="recipe_instructions" name="instructions">
+                <!-- TODO: Change Current User -->
+                <!-- <input type="hidden" value="{{currentuser}}" name="username_field"> -->
+                <input type="hidden" value="{{recipe_name}}" name="name">
+                <input type="hidden" value="{{recipe_ingredients}}" name="ingredients">
+                <input type="hidden" value="{{recipe_instructions}}" name="instructions">
                 <button class="custom_button" type="submit">Save Recipe</button>
             </form>
             
