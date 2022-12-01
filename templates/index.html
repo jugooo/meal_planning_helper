@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="static/css/index.css">
+        <link rel="stylesheet" href="static/css/form_style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- Recipe Title -->
+            <h1 id="h1_title" class="h1_title_style">*Recipe Title*</h1>
+            <!-- Recipe Poster -->
+            <div class="poster_div">
+                <img class="poster_style" width="500" height="700"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDdAIkEyN95FvKFGvYyB8MeATOviZhbuMMtA&usqp=CAU" alt="">
+            </div>
+            <!-- Ingredients Subtitle -->
+            <div class="subtitle_div">
+                <h4 id="h4_subtitle" class="h4_subtitle_style">*Recipe Ingredients*</h4>
+            </div>
+        </div>
+
+
+        <!-- Button Group -->
+        <div class="btn_group">
+            <a href="{{wiki_link}}" target="_blank" class="custom_button" type="submit">Save Recipe</a>
+            
+            <a href="#" target="_blank" class="custom_button" type="submit">View Saved Recipes</a>
+
+            <form action="/index" id="refresh_form">
+                <a href="" class="custom_button" form="refresh_form" type="submit">New Recipe Roll</a>
+            </form>
+        </div>
+        <!-- End Button Group -->
+
+
+    </body>
+</html>

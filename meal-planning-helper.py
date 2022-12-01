@@ -41,14 +41,33 @@ def inital_menu():
 def create_account():
     return flask.render_template('register.html')
 
-@app.route('/login')
+@app.route('/login',methods=['GET','POST'])
 def login():
     return flask.render_template('login.html')
 
+@app.route('/handle_login',methods=['POST'])
+def handle_login():
+    return flask.redirect(flask.url_for('index'))
+    # return flask.render_template('index.html')
 
 # ------ Login Required Section ------ #
 
+@app.route('/index')
+def index():
+    '''
+    Display Homepage
+    Categories
+    After Category is selected display random recipe
+    '''
+    return flask.render_template('index.html')
 
+# (?) How to put category name into URL
+# @app.route('/random_recipe/<category>')
+# def random_recipe():
+#     '''
+#     Display Random Recipe Based off category
+#     '''
+#     return flask.render_template('random_recipe.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
