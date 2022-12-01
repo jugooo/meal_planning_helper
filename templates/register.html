@@ -5,26 +5,30 @@
         <link rel="stylesheet" href="static/css/index.css">
     </head>
     <body>
-        {% with messages = get_flashed_messages() %}
+
+            {% with messages = get_flashed_messages() %}
             {% if messages %}
+            <div style="font-size: x-large;">
                 {% for message in messages %}
                     {{ message }}
                 {% endfor %}
+            </div>
             {% endif %}
         {% endwith %}
 
+
         <!-- May Need To Adjust This Section Depending What Sam Wants to Put -->
-        <div  class="form_container" style="margin-top: 10em;">
+        <div class="form_container" style="margin-top: 10em;">
             <h1 class="h1_title_style">Create Account</h1>
             <form action="/handle_register" method="POST">
                 <div>
                     <h2 class="h2_title_style">Username</h2>
                     <input class="input_text" type="text" name="username_input"><br>
                 </div>
-                <div>
+                <!-- <div>
                     <h2 class="h2_title_style">Email</h2>
                     <input class="input_text"type="text" name="email_input"><br><br>
-                </div>
+                </div> -->
                 <button type="submit" class="form_button"> Create Account</button>
             </form>
         </div>

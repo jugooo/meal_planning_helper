@@ -11,12 +11,14 @@
                 {% for rec in recipes %}
                     <!-- Recipe Title -->
                     <!-- {{rec.recipe_name}} -->
-                    <h1 id="h1_title" class="h1_title_style">Recipe Title</h1>
+                    <h1 id="h1_title" class="h1_title_style">{{rec.recipe_name}}</h1>
                     <!-- Ingredients Subtitle -->
                     <div class="subtitle_div">
                         <!-- {{rec.recipe_intructions}} -->
-                        <h4 id="h4_subtitle" class="h4_subtitle_style">Recipe Ingredients</h4>
+                        
+                        <h4 id="h4_subtitle" class="h4_subtitle_style">{{rec.recipe_ingredients}}</h4>
                     </div>
+                    <br>
                 {% endfor %}
                 {% else %}
                 <h1 class="h1_title_style">There are no recipes saved for you</h1>

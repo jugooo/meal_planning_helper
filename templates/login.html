@@ -7,7 +7,7 @@
     <body>
         {% with messages = get_flashed_messages() %}
             {% if messages %}
-                <div>
+            <div style="font-size: x-large;">
                     {{ messages[0] }}
                 </div>
             {% endif %}
@@ -19,10 +19,10 @@
                     <h2 class="h2_title_style">Username</h2>
                     <input class="input_text" name="username_input"><br>
                 </div>
-                <div>
+                <!-- <div>
                     <h2 class="h2_title_style">Email</h2>
                     <input class="input_text"  name="email_input"><br><br>
-                </div>
+                </div> -->
                 <button type="submit" class="form_button"> Login</button>
             </form>            
         </div>
