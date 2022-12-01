@@ -19,12 +19,20 @@
             </div>
         </div>
 
-
         <!-- Button Group -->
         <div class="btn_group">
-            <a href="{{wiki_link}}" target="_blank" class="custom_button" type="submit">Save Recipe</a>
+            <form action="/handle_save_recipe" method="POST">
+                <input type="hidden" value="currentuser" name="username_field">
+                <!-- <input type="hidden" value="{{recipe_name}}">
+                <input type="hidden" value="{{recipe_ingredients}}">
+                <input type="hidden" value="{{recipe_instructions}}"> -->
+                <input type="hidden" value="recipe_name" name="name">
+                <input type="hidden" value="recipe_ingredients" name="ingredients">
+                <input type="hidden" value="recipe_instructions" name="instructions">
+                <button class="custom_button" type="submit">Save Recipe</button>
+            </form>
             
-            <a href="#" target="_blank" class="custom_button" type="submit">View Saved Recipes</a>
+            <a href="saved_recipes" class="custom_button" type="submit">View Saved Recipes</a>
 
             <form action="/index" id="refresh_form">
                 <a href="" class="custom_button" form="refresh_form" type="submit">New Recipe Roll</a>

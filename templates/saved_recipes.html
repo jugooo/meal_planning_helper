@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="static/css/index.css">
+        <link rel="stylesheet" href="static/css/form_style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            {% if recipes is defined %}
+                {% for rec in recipes %}
+                    <!-- Recipe Title -->
+                    <!-- {{rec.recipe_name}} -->
+                    <h1 id="h1_title" class="h1_title_style">Recipe Title</h1>
+                    <!-- Ingredients Subtitle -->
+                    <div class="subtitle_div">
+                        <!-- {{rec.recipe_intructions}} -->
+                        <h4 id="h4_subtitle" class="h4_subtitle_style">Recipe Ingredients</h4>
+                    </div>
+                {% endfor %}
+                {% else %}
+                <h1 class="h1_title_style">There are no recipes saved for you</h1>
+            {% endif %}
+        </div>
+
+
+        <!-- Button Group -->
+            <form action="/index" id="refresh_form">
+                <a href="/index" class="custom_button" style="margin-top: 20px;" form="refresh_form" type="submit">Home</a>
+            </form>
+        </div>
+        <!-- End Button Group -->
+
+
+    </body>
+</html>
