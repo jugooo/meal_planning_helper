@@ -75,7 +75,9 @@ body{
     background-color: white;
     margin-right: 8%;
     margin-left: 8%;
-    height: 150px;
+    padding-left: 2em;
+    padding-right: 2em;
+    height: 25em;
     justify-content: center;
     border-radius: 25px;
     border: 1px solid black;

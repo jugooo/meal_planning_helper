@@ -4,10 +4,12 @@ from flask_login import UserMixin
 import psycopg2
 from dotenv import load_dotenv
 import os
+import static.custom_classes as cc
 from flask_login import LoginManager, login_user,current_user,login_required
 
 #Load Env Vars
 DATABASE_URL = os.getenv('DATABASE_URL')
+API_KEY = os.getenv('API_KEY')
 
 #Create Extension
 db = SQLAlchemy()
@@ -60,7 +62,15 @@ def index_page():
     Categories
     After Category is selected display random recipe
     '''
-    return flask.render_template('index.html')
+    recipe_dict = cc.pull_api_data(API_KEY)
+    print(recipe_dict['image_url'])
+    return flask.render_template(
+        'index.html',
+         recipe_name=recipe_dict['name'],
+         recipe_img = recipe_dict['image_url'],
+         recipe_instructions = recipe_dict['instructions'],
+         recipe_ingredients = recipe_dict['ingredients'],
+        )
 
 #Returns a list of saved recipes
 @app.route('/saved_recipes',methods=['GET','POST'])
@@ -75,6 +85,7 @@ def view_saved_recipes(username):
 
 @app.route('/handle_save_recipe', methods=['GET','POST'])
 def handle_save_recipe():
+    #TODO:Save Username to send to database
     recipe_form = flask.request.form
     recipe_user = recipe_form['username_field']
     recipe_name = recipe_form['name']

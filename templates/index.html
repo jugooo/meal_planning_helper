@@ -8,14 +8,16 @@
     <body>
         <div class="container">
             <!-- Recipe Title -->
-            <h1 id="h1_title" class="h1_title_style">*Recipe Title*</h1>
+            <h1 id="h1_title" class="h1_title_style">{{recipe_name}}</h1>
             <!-- Recipe Poster -->
             <div class="poster_div">
-                <img class="poster_style" width="500" height="700"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDdAIkEyN95FvKFGvYyB8MeATOviZhbuMMtA&usqp=CAU" alt="">
+                <img class="poster_style" width="556" height="370" src="{{recipe_img}}">
             </div>
             <!-- Ingredients Subtitle -->
             <div class="subtitle_div">
-                <h4 id="h4_subtitle" class="h4_subtitle_style">*Recipe Ingredients*</h4>
+                <h4 id="h4_subtitle" class="h4_subtitle_style">{{recipe_ingredients}}</h4>
+                <br><br>
+                <h4>{{recipe_instructions}}</h4>
             </div>
         </div>
 
