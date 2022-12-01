@@ -1,4 +1,6 @@
 # meal_planning_helper
+Contributors: Nathan Nguyen, Samantha Lopez
+
 THERE'S A PAYMENT CONNECTED TO API, TRY NOT TO REQUEST TO SERVER TO MUCH *pls*
 
 Link to Repository - git@github.com:jugooo/meal_planning_helper.git
